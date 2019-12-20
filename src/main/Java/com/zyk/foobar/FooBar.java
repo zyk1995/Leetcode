@@ -1,7 +1,5 @@
 package com.zyk.foobar;
 
-import com.zyk.printSorted.Solution;
-
 public class FooBar {
     private int n;
     private volatile boolean flag = false;
