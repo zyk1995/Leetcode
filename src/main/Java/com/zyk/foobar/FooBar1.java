@@ -1,5 +1,7 @@
 package com.zyk.foobar;
 
+import java.util.concurrent.ThreadPoolExecutor;
+
 public class FooBar1 {
     private int n;
     private Object lock = new Object();
@@ -33,7 +35,7 @@ public class FooBar1 {
                     lock.wait();
                 }
                 // printBar.run() outputs "bar". Do not change or remove this line.
-//                printBar.run();
+                printBar.run();
                 flag = false;
                 lock.notifyAll();
             }
