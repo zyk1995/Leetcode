@@ -32,11 +32,11 @@ public class SemaphoreTest {
                         //获取许可
                         semaphore.acquire();
                         //执行
-                        System.out.println("Accessing: " + num);
+                        System.out.println("Accessing: " + num + " Avaliable: " + semaphore.availablePermits());
                         Thread.sleep(new Random().nextInt(5000)); // 模拟随机执行时长
                         //释放
                         semaphore.release();
-                        System.out.println("Release..." + num);
+                        System.out.println("Release..." + num + " Avaliable: " + semaphore.availablePermits());
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
