@@ -21,7 +21,7 @@ public class SemaphoreTest {
         ExecutorService executorService = Executors.newCachedThreadPool();
 
         //信号量，只允许 3个线程同时访问
-        Semaphore semaphore = new Semaphore(3);
+        Semaphore semaphore = new Semaphore(0);
 
         for (int i=0;i<10;i++){
             final long num = i;
